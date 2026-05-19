@@ -1,3 +1,4 @@
 .preview/
 裁黑边/report.json
-
+__pycache__/
+*.pyc
