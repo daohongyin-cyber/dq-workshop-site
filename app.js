@@ -648,7 +648,6 @@ const works = workDefinitions.map((definition) => makeWork(definition));
 const categories = ["全部", ...new Set(works.map((item) => item.category))];
 const detailPanel = document.querySelector("#detailPanel");
 const detailContent = document.querySelector("#detailContent");
-const serviceSelect = document.querySelector("#serviceSelect");
 
 function getCreatorById(id) {
   return creators.find((item) => item.id === id);
@@ -862,7 +861,7 @@ function openWorkDetail(workId) {
       <h2>${work.title}</h2>
       <p class="detail-copy">${work.description}</p>
       <div class="detail-author-actions">
-        <button class="button button-solid" type="button" data-open-inquiry data-prefill-service="${work.category === "品牌IP" ? "品牌IP" : work.category}">发同类需求</button>
+        <button class="button button-solid" type="button" data-open-inquiry>联系工作室</button>
         <button class="detail-action" type="button" data-creator-id="${creator.id}">看作者方向</button>
       </div>
     </div>
@@ -917,7 +916,7 @@ function openCreatorDetail(creatorId) {
       <p class="detail-copy">${creator.bio}</p>
       <div class="detail-author-actions">
         <a class="button button-ghost" href="./creator.html">看创作者工作台原型</a>
-        <button class="button button-solid" type="button" data-open-inquiry>向这个方向发需求</button>
+        <button class="button button-solid" type="button" data-open-inquiry>联系工作室</button>
       </div>
     </div>
     <section class="detail-section">
@@ -992,16 +991,7 @@ function handleClick(event) {
 
   if (inquiryTrigger) {
     closePanel();
-    const prefillService = inquiryTrigger.dataset.prefillService;
-    if (prefillService && serviceSelect) {
-      for (const option of serviceSelect.options) {
-        if (option.value === prefillService) {
-          serviceSelect.value = prefillService;
-          break;
-        }
-      }
-    }
-    document.querySelector("#inquiry").scrollIntoView({ behavior: "smooth", block: "start" });
+    document.querySelector("#contact").scrollIntoView({ behavior: "smooth", block: "start" });
   }
 }
 

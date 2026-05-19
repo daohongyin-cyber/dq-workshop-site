@@ -478,7 +478,8 @@ a {
 .featured-grid,
 .creators-grid,
 .flow-grid,
-.inquiry-layout {
+.inquiry-layout,
+.contact-layout {
   display: grid;
   gap: 20px;
 }
@@ -660,6 +661,82 @@ a {
 .inquiry-layout {
   grid-template-columns: 0.9fr 1.1fr;
   align-items: start;
+}
+
+.contact-layout {
+  grid-template-columns: 1fr 360px;
+  align-items: start;
+}
+
+.contact-card {
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent), var(--bg-elevated);
+  box-shadow: var(--shadow);
+  padding: 30px;
+}
+
+.contact-card h3 {
+  margin: 16px 0 18px;
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  letter-spacing: -0.04em;
+}
+
+.contact-list {
+  display: grid;
+  gap: 12px;
+}
+
+.contact-item {
+  padding: 16px 18px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.contact-item span,
+.contact-tip {
+  color: var(--text-dim);
+  font-size: 0.9rem;
+}
+
+.contact-item strong {
+  display: block;
+  margin-top: 8px;
+  color: var(--text);
+  line-height: 1.7;
+}
+
+.contact-qr-card {
+  text-align: center;
+}
+
+.qr-placeholder {
+  display: grid;
+  place-items: center;
+  width: min(100%, 240px);
+  aspect-ratio: 1 / 1;
+  margin: 0 auto;
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  background:
+    linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px),
+    linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+    #111;
+  background-size: 18px 18px;
+}
+
+.qr-grid {
+  width: 72%;
+  height: 72%;
+  border-radius: 18px;
+  background:
+    radial-gradient(circle at 20% 20%, #f2f2f2 0 12%, transparent 13%),
+    radial-gradient(circle at 80% 20%, #f2f2f2 0 12%, transparent 13%),
+    radial-gradient(circle at 20% 80%, #f2f2f2 0 12%, transparent 13%),
+    linear-gradient(90deg, transparent 0 14%, #f2f2f2 14% 18%, transparent 18% 32%, #f2f2f2 32% 36%, transparent 36% 50%, #f2f2f2 50% 54%, transparent 54% 68%, #f2f2f2 68% 72%, transparent 72%),
+    linear-gradient(transparent 0 14%, #f2f2f2 14% 18%, transparent 18% 32%, #f2f2f2 32% 36%, transparent 36% 50%, #f2f2f2 50% 54%, transparent 54% 68%, #f2f2f2 68% 72%, transparent 72%);
+  opacity: 0.8;
 }
 
 .workspace-main {
@@ -998,7 +1075,8 @@ a {
   .hero,
   .section-heading,
   .inquiry-layout,
-  .workspace-hero {
+  .workspace-hero,
+  .contact-layout {
     grid-template-columns: 1fr;
   }
 
