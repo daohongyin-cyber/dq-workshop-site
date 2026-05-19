@@ -6,7 +6,7 @@
     <title>DQ 工作室</title>
     <meta
       name="description"
-      content="DQ 工作室静态原型：首页包含简介、主图、精选项目、作品瀑布流、作者信息和询价入口。"
+      content="DQ 工作室：甲方先看作品，再看作者，再发需求；邀请制创作者可管理作品与资料。"
     />
     <link rel="stylesheet" href="./styles.css" />
   </head>
@@ -17,55 +17,126 @@
         <a class="brand" href="#home" aria-label="DQ 工作室首页">
           <span class="brand-copy">
             <strong>DQ 工作室</strong>
-            <small>作品档案与委托入口</small>
+            <small>先看作品，再发需求</small>
           </span>
         </a>
         <nav class="site-nav">
           <a href="#home">首页</a>
-          <a href="#works">作品</a>
-          <a href="#creators">作者</a>
-          <a href="#inquiry">询价</a>
+          <a href="#services">找服务</a>
+          <a href="#works">看作品</a>
+          <a href="#inquiry">发需求</a>
+          <a href="./creator.html">创作者入口</a>
         </nav>
-        <button class="header-cta" type="button" data-open-inquiry>发起项目</button>
+        <div class="header-actions">
+          <a class="header-link" href="./admin.html">管理后台</a>
+          <button class="header-cta" type="button" data-open-inquiry>直接发需求</button>
+        </div>
       </header>
 
       <main>
         <section class="hero" id="home">
           <div class="hero-copy">
-            <p class="eyebrow">极简 / 黑白灰 / 作品优先 / 精选合作</p>
+            <p class="eyebrow">甲方优先 / 邀请制创作者 / 无需注册先发需求</p>
             <h1 class="hero-title">
               <span>DQ</span>
               <span>工作室</span>
             </h1>
             <p class="hero-text">
-              面向品牌、潮流团体和收藏爱好者的设计工作室原型。
-              先通过首页建立气质，再通过作品和作者详情判断是否适合合作。
+              甲方先通过作品判断气质，再通过作者判断是否合适，最后直接发需求。创作者则通过独立工作台管理作品、资料和收到的询价。
             </p>
             <div class="hero-actions">
-              <a class="button button-solid" href="#works">查看作品</a>
-              <button class="button button-ghost" type="button" data-open-inquiry>
-                发起询价
-              </button>
+              <a class="button button-solid" href="#works">先看作品</a>
+              <button class="button button-ghost" type="button" data-open-inquiry>直接发需求</button>
+              <a class="button button-ghost" href="./creator.html">创作者入口</a>
             </div>
             <div class="hero-tags">
               <span>品牌设计</span>
               <span>海报视觉</span>
               <span>专辑封面</span>
+              <span>品牌 IP</span>
               <span>三维建模</span>
-              <span>头雕概念</span>
+              <span>头雕胸像</span>
             </div>
           </div>
 
           <div class="hero-stage">
             <div class="stage-frame">
-              <button class="stage-window-button" type="button" data-work-id="burger-emblem">
+              <button class="stage-window-button" type="button" data-work-id="poster-03">
                 <div class="stage-window" id="heroFeature"></div>
               </button>
             </div>
             <div class="stage-note">
               <span>首页主图窗口</span>
-              <span>点击可直接进入作品详情</span>
+              <span>点击后直接看作品详情和作者信息</span>
             </div>
+          </div>
+        </section>
+
+        <section class="section service-section" id="services">
+          <div class="section-heading">
+            <div>
+              <p class="section-kicker">找服务</p>
+              <h2>甲方先选方向，再决定找谁</h2>
+            </div>
+            <p class="section-copy">
+              第一阶段先让甲方判断项目归属，再去看对应作品和作者。不需要先注册，也不需要先理解复杂的平台规则。
+            </p>
+          </div>
+          <div class="service-grid">
+            <article class="service-card">
+              <span class="service-index">01</span>
+              <h3>品牌设计</h3>
+              <p>适合新品牌、产品包装、标识图形和系统视觉。</p>
+              <div class="service-actions">
+                <button class="button button-ghost" type="button" data-filter-and-scroll="品牌IP">看相关作品</button>
+                <button class="button button-solid" type="button" data-open-inquiry data-prefill-service="品牌设计">发品牌需求</button>
+              </div>
+            </article>
+            <article class="service-card">
+              <span class="service-index">02</span>
+              <h3>海报视觉</h3>
+              <p>适合展陈海报、活动海报和内容型主视觉。</p>
+              <div class="service-actions">
+                <button class="button button-ghost" type="button" data-filter-and-scroll="海报视觉">看相关作品</button>
+                <button class="button button-solid" type="button" data-open-inquiry data-prefill-service="海报视觉">发海报需求</button>
+              </div>
+            </article>
+            <article class="service-card">
+              <span class="service-index">03</span>
+              <h3>专辑封面</h3>
+              <p>适合人物封面、单曲视觉、数字封套和氛围型画面。</p>
+              <div class="service-actions">
+                <button class="button button-ghost" type="button" data-filter-and-scroll="专辑封面">看相关作品</button>
+                <button class="button button-solid" type="button" data-open-inquiry data-prefill-service="专辑封面">发封面需求</button>
+              </div>
+            </article>
+            <article class="service-card">
+              <span class="service-index">04</span>
+              <h3>品牌 IP</h3>
+              <p>适合潮玩角色、餐饮品牌、标识图形和人物化表达。</p>
+              <div class="service-actions">
+                <button class="button button-ghost" type="button" data-filter-and-scroll="品牌IP">看相关作品</button>
+                <button class="button button-solid" type="button" data-open-inquiry data-prefill-service="品牌IP">发IP需求</button>
+              </div>
+            </article>
+            <article class="service-card">
+              <span class="service-index">05</span>
+              <h3>三维建模</h3>
+              <p>适合角色白模、舞台空间、材质表现和三维视觉。</p>
+              <div class="service-actions">
+                <button class="button button-ghost" type="button" data-filter-and-scroll="三维建模">看相关作品</button>
+                <button class="button button-solid" type="button" data-open-inquiry data-prefill-service="三维建模">发三维需求</button>
+              </div>
+            </article>
+            <article class="service-card">
+              <span class="service-index">06</span>
+              <h3>头雕胸像</h3>
+              <p>适合写实头雕、角色胸像、收藏向造型和上色展示。</p>
+              <div class="service-actions">
+                <button class="button button-ghost" type="button" data-filter-and-scroll="头雕">看相关作品</button>
+                <button class="button button-solid" type="button" data-open-inquiry data-prefill-service="头雕概念">发头雕需求</button>
+              </div>
+            </article>
           </div>
         </section>
 
@@ -76,34 +147,37 @@
               <h2>先让作品说话</h2>
             </div>
             <p class="section-copy">
-              首页先展示一到两个最能代表气质的项目，让来访者先判断审美和完成度。
+              这里放最能代表工作室气质的项目。甲方先看这两块，就能快速判断你们是不是同一审美语言。
             </p>
           </div>
           <div class="featured-grid" id="featuredGrid"></div>
         </section>
 
-        <section class="section studio-flow">
+        <section class="section client-flow">
           <div class="section-heading">
             <div>
-              <p class="section-kicker">浏览路径</p>
-              <h2>先看作品，再看作者，再谈合作</h2>
+              <p class="section-kicker">甲方路径</p>
+              <h2>先看作品，再看作者，再发需求</h2>
             </div>
+            <p class="section-copy">
+              这是公开前台最重要的路径。你不需要先理解平台，只需要完成这三步。
+            </p>
           </div>
           <div class="flow-grid">
             <article class="flow-card">
               <span>01</span>
-              <h3>先通过作品判断气质</h3>
-              <p>首屏和精选项目负责建立第一印象，瀑布流负责继续筛选项目类型和完成度。</p>
+              <h3>浏览作品</h3>
+              <p>先按方向看作品，找到风格最接近你项目的那组图。</p>
             </article>
             <article class="flow-card">
               <span>02</span>
-              <h3>再通过作者页判断实力</h3>
-              <p>作者页重点展示擅长方向、价格区间、交付周期和对应代表作。</p>
+              <h3>判断作者</h3>
+              <p>点进作品详情，直接看作者方向、适合项目和合作信息。</p>
             </article>
             <article class="flow-card">
               <span>03</span>
-              <h3>最后发起项目沟通</h3>
-              <p>这版先做轻量询价入口，不急着上复杂交易系统，先跑通工作室自己的接单流程。</p>
+              <h3>直接发需求</h3>
+              <p>不注册也能发需求，工作室先统一承接，再决定分配给哪位创作者。</p>
             </article>
           </div>
         </section>
@@ -112,56 +186,77 @@
           <div class="section-heading">
             <div>
               <p class="section-kicker">作品墙</p>
-              <h2>作品瀑布流</h2>
+              <h2>先横向铺满，再往下看</h2>
             </div>
             <p class="section-copy">
-              卡片只保留标题、类目、作者和一句短说明，更多信息收进详情面板里。
+              作品墙是甲方的主入口。先按方向筛，再点作品，看完直接发同类需求。
             </p>
           </div>
-          <div class="filter-row" id="filterRow"></div>
+          <div class="works-toolbar">
+            <div class="filter-row" id="filterRow"></div>
+            <div class="toolbar-actions">
+              <button class="button button-ghost" type="button" data-open-inquiry>看完后直接发需求</button>
+              <a class="button button-ghost" href="./creator.html">我是创作者</a>
+            </div>
+          </div>
           <div class="works-masonry" id="worksGrid"></div>
         </section>
 
         <section class="section creators-section" id="creators">
           <div class="section-heading">
             <div>
-              <p class="section-kicker">作者</p>
-              <h2>让第三方快速判断作者实力</h2>
+              <p class="section-kicker">邀请制创作者</p>
+              <h2>甲方看实力，创作者看工作台</h2>
             </div>
             <p class="section-copy">
-              这一部分不是简历，而是作者分展厅。重点展示能做什么、适合什么项目、价格大概在哪个区间。
+              前台先展示方向和能力，后台再做真正的作品管理、资料修改和询价处理。
             </p>
           </div>
           <div class="creators-grid" id="creatorsGrid"></div>
+          <div class="workspace-preview-grid">
+            <article class="workspace-preview-card">
+              <p class="workspace-kicker">创作者工作台</p>
+              <h3>管理作品、修改资料、查看询价</h3>
+              <p>邀请制创作者登录后，先管理自己的作品，再处理收到的需求。</p>
+              <a class="button button-solid" href="./creator.html">查看创作者工作台</a>
+            </article>
+            <article class="workspace-preview-card">
+              <p class="workspace-kicker">管理后台</p>
+              <h3>审核内容、分配询价、维护首页</h3>
+              <p>管理员统一审核作品和创作者资料，并把甲方需求分配给合适的人。</p>
+              <a class="button button-ghost" href="./admin.html">查看管理后台</a>
+            </article>
+          </div>
         </section>
 
         <section class="section inquiry-section" id="inquiry">
           <div class="section-heading">
             <div>
-              <p class="section-kicker">询价</p>
-              <h2>发起一个项目</h2>
+              <p class="section-kicker">发需求</p>
+              <h2>先留需求，不必先注册</h2>
             </div>
             <p class="section-copy">
-              当前为原型页面，这里保留一个轻量询价区，后面可以接入真实表单或你的联系方式。
+              甲方最重要的是把需求说清楚。工作室先接单，再决定由谁来沟通和执行。
             </p>
           </div>
           <div class="inquiry-layout">
             <div class="inquiry-panel">
-              <p class="inquiry-note">当前适合展示在首页的合作方向</p>
-              <h3>品牌视觉、潮流海报、专辑封面、三维表现与头雕概念</h3>
+              <p class="inquiry-note">当前适合这版流程的合作方式</p>
+              <h3>先统一收需求，再由工作室分配给合适的创作者</h3>
               <ul class="inquiry-points">
-                <li>适合想先看审美和案例再谈合作的客户</li>
-                <li>适合有预算区间和时间节点的项目</li>
-                <li>适合先由工作室统一承接与分配的接单方式</li>
+                <li>不强制注册，先发需求就行</li>
+                <li>可以先选服务方向，再看作品和作者</li>
+                <li>管理员先接住线索，再分配给邀请制创作者</li>
               </ul>
             </div>
-            <form class="inquiry-form">
+            <form class="inquiry-form" id="inquiryForm">
               <label>
                 项目类型
-                <select>
+                <select id="serviceSelect">
                   <option>品牌设计</option>
                   <option>海报视觉</option>
                   <option>专辑封面</option>
+                  <option>品牌IP</option>
                   <option>三维建模</option>
                   <option>头雕概念</option>
                 </select>
@@ -176,25 +271,29 @@
                 </select>
               </label>
               <label>
-                交付时间
+                希望交付时间
                 <input type="text" placeholder="例如：三周内 / 6 月中旬前" />
               </label>
               <label>
                 项目描述
-                <textarea rows="5" placeholder="一句话说清楚你要做什么、给谁看、希望是什么气质。"></textarea>
+                <textarea rows="5" placeholder="一句话写清楚项目类型、给谁看、希望什么气质。"></textarea>
               </label>
               <label>
                 联系方式
                 <input type="text" placeholder="微信 / 手机 / 邮箱" />
               </label>
-              <button class="button button-solid" type="button">提交原型表单</button>
+              <label>
+                指定作者
+                <input type="text" placeholder="可选：不指定则由工作室推荐" />
+              </label>
+              <button class="button button-solid" type="button">提交需求</button>
             </form>
           </div>
         </section>
       </main>
 
       <footer class="site-footer">
-        当前为静态演示壳子，后续可替换为真实作品图片、作者资料和项目详情内容。
+        当前为结构原型，下一步可以继续细化甲方下单逻辑、创作者后台字段和管理员分配流程。
       </footer>
     </div>
 

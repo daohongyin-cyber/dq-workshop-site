@@ -31,6 +31,19 @@ const creators = [
     initials: "牌",
   },
   {
+    id: "album",
+    name: "封面方向",
+    role: "专辑封面 / 情绪视觉",
+    city: "工作室内部",
+    availability: "当前可接封面与人物视觉项目",
+    price: "价格按项目评估",
+    cycle: "周期视复杂度而定",
+    bio:
+      "这一组更偏专辑封面、人物氛围和单张视觉表达，适合单曲封面、专辑封面和具有情绪感的主画面项目。",
+    services: ["专辑封面", "人物氛围图", "音乐视觉"],
+    initials: "封",
+  },
+  {
     id: "model",
     name: "三维方向",
     role: "角色建模 / 空间方案",
@@ -61,15 +74,27 @@ const creators = [
 const categoryMeta = {
   海报视觉: {
     deliverables: ["主海报", "主题排版", "图文合成"],
-    suitable: ["品牌活动海报", "展陈海报", "内容型封面"],
+    suitable: ["品牌活动海报", "展陈海报", "内容型主视觉"],
     description:
       "这一张更适合作为海报方向的样本，重点是让来访者快速理解你的排版、图像组织和画面节奏能力。",
+  },
+  专辑封面: {
+    deliverables: ["封面主图", "氛围人物图", "数字封套"],
+    suitable: ["单曲封面", "专辑封面", "音乐视觉"],
+    description:
+      "这一张更适合作为专辑封面方向的样本，重点是让来访者快速判断你的气氛塑造和人物视觉能力。",
   },
   品牌IP: {
     deliverables: ["标识图形", "角色设定", "品牌延展"],
     suitable: ["餐饮品牌", "潮流品牌", "年轻化形象"],
     description:
       "这一张更适合作为品牌 IP 方向的样本，重点是让来访者知道你不仅能做角色，也能做标识、图形和视觉延展。",
+  },
+  品牌设计: {
+    deliverables: ["品牌系统", "应用物料", "标识图形"],
+    suitable: ["新品牌", "产品物料", "系统视觉"],
+    description:
+      "这一张更适合作为品牌设计方向的样本，重点是让来访者知道你也能做完整的品牌系统和落地物料。",
   },
   三维建模: {
     deliverables: ["建模展示", "材质表现", "空间方案"],
@@ -185,13 +210,13 @@ const workDefinitions = [
   },
   {
     id: "poster-02",
-    title: "海报练习二",
-    category: "海报视觉",
+    title: "封面练习一",
+    category: "专辑封面",
     creatorId: "poster",
     file: "裁黑边/海报/微信图片_20260518171729_1244_72.jpg",
     width: 1242,
     height: 1660,
-    summary: "黑橙对比强烈的人物海报，适合作为情绪型主视觉样本。",
+    summary: "黑橙对比强烈的人物画面，适合作为专辑封面方向样本。",
   },
   {
     id: "poster-03",
@@ -219,13 +244,143 @@ const workDefinitions = [
   },
   {
     id: "poster-04",
-    title: "海报练习四",
-    category: "海报视觉",
-    creatorId: "poster",
+    title: "封面练习二",
+    category: "专辑封面",
+    creatorId: "album",
     file: "裁黑边/海报/微信图片_20260518171741_1248_72.jpg",
     width: 1080,
     height: 1440,
-    summary: "更偏封面气质的单张海报，适合竖向浏览场景。",
+    summary: "更偏封面气质的单张作品，适合专辑封面和竖向浏览场景。",
+  },
+  {
+    id: "album-01",
+    title: "金帐古琴",
+    category: "专辑封面",
+    creatorId: "album",
+    file: "专辑封面/18820432cd0368a374c8220514b24ca2.jpg",
+    width: 2048,
+    height: 2048,
+    summary: "金色光感和古风人物气质很强，适合作为叙事型封面。",
+  },
+  {
+    id: "album-02",
+    title: "封面氛围一",
+    category: "专辑封面",
+    creatorId: "album",
+    file: "专辑封面/21eea1d29921f0bfcf594557540fdfd.jpg",
+    width: 1500,
+    height: 1500,
+    summary: "更偏情绪和人物氛围的封面画面，适合单曲视觉方向。",
+  },
+  {
+    id: "album-03",
+    title: "封面氛围二",
+    category: "专辑封面",
+    creatorId: "album",
+    file: "专辑封面/53a72e46308058b2b3144fb3fcbdf0d7.jpg",
+    width: 1280,
+    height: 1280,
+    summary: "方形比例和单主体表达清晰，适合数字封套和封面主图。",
+  },
+  {
+    id: "album-04",
+    title: "封面氛围三",
+    category: "专辑封面",
+    creatorId: "album",
+    file: "专辑封面/6c9a15f9991521848af639ad071b59a3.jpg",
+    width: 1280,
+    height: 1280,
+    summary: "更偏人物主导的封面氛围图，适合突出角色感。",
+  },
+  {
+    id: "album-05",
+    title: "便利店夜光",
+    category: "专辑封面",
+    creatorId: "album",
+    file: "专辑封面/731a54cdf4f0bc6acfa3dc8c861d366b.jpg",
+    width: 1339,
+    height: 1280,
+    summary: "夜景人物和光效感很强，适合作为流行向封面视觉。",
+  },
+  {
+    id: "album-06",
+    title: "封面氛围四",
+    category: "专辑封面",
+    creatorId: "album",
+    file: "专辑封面/b7ab179edc4e9cefc7658a3bf28ecc0f.jpg",
+    width: 1080,
+    height: 1080,
+    summary: "更偏极简画面的方形封面样本，适合做专辑主图。",
+  },
+  {
+    id: "album-07",
+    title: "封面氛围五",
+    category: "专辑封面",
+    creatorId: "album",
+    file: "专辑封面/b9febf3f84855cc049958c3740decf26.jpg",
+    width: 1112,
+    height: 1187,
+    summary: "略偏竖幅的封面构图，适合人物和气氛共同承担主视觉。",
+  },
+  {
+    id: "album-08",
+    title: "封面氛围六",
+    category: "专辑封面",
+    creatorId: "album",
+    file: "专辑封面/c3bf0237e1a4fc83f4d01704b95bdc1.jpg",
+    width: 800,
+    height: 800,
+    summary: "更偏纯封面感的方图，适合单曲和数字平台展示。",
+  },
+  {
+    id: "album-09",
+    title: "封面氛围七",
+    category: "专辑封面",
+    creatorId: "album",
+    file: "专辑封面/cac3afd10f2c5df0e37505d1f853baa.jpg",
+    width: 823,
+    height: 823,
+    summary: "色调和主体关系更适合做情绪类封面主图。",
+  },
+  {
+    id: "album-10",
+    title: "封面氛围八",
+    category: "专辑封面",
+    creatorId: "album",
+    file: "专辑封面/d658d3fb48acb3ae4d217c2531dddea9.jpg",
+    width: 1865,
+    height: 1784,
+    summary: "接近方图的封面作品，适合数字封面和宣传图并用。",
+  },
+  {
+    id: "album-11",
+    title: "封面氛围九",
+    category: "专辑封面",
+    creatorId: "album",
+    file: "专辑封面/dd7f89586c79ace5a995d8adaa48b311.jpg",
+    width: 1661,
+    height: 1638,
+    summary: "主体关系完整，适合承担较强的主封面展示任务。",
+  },
+  {
+    id: "album-12",
+    title: "蝴蝶",
+    category: "专辑封面",
+    creatorId: "album",
+    file: "专辑封面/蝴蝶.jpg",
+    width: 1500,
+    height: 1500,
+    summary: "色彩和肢体张力更强，适合作为实验气质的封面。",
+  },
+  {
+    id: "album-13",
+    title: "封面氛围十",
+    category: "专辑封面",
+    creatorId: "album",
+    file: "专辑封面/微信图片_20250530000055.jpg",
+    width: 1280,
+    height: 1579,
+    summary: "偏竖向人物构图，适合作为封面和海报之间的过渡类作品。",
   },
   {
     id: "street-ip-01",
@@ -300,12 +455,12 @@ const workDefinitions = [
   {
     id: "tea-brand-materials",
     title: "南洋手作物料",
-    category: "品牌IP",
+    category: "品牌设计",
     creatorId: "brand-ip",
     file: "裁黑边/品牌ip/微信图片_20260518173456_1261_72.jpg",
     width: 655,
     height: 1199,
-    summary: "一组偏餐饮品牌落地物料的展示图，适合说明应用能力。",
+    summary: "一组偏餐饮品牌落地物料的展示图，适合说明品牌设计和应用能力。",
   },
   {
     id: "toy-character-model",
@@ -493,6 +648,7 @@ const works = workDefinitions.map((definition) => makeWork(definition));
 const categories = ["全部", ...new Set(works.map((item) => item.category))];
 const detailPanel = document.querySelector("#detailPanel");
 const detailContent = document.querySelector("#detailContent");
+const serviceSelect = document.querySelector("#serviceSelect");
 
 function getCreatorById(id) {
   return creators.find((item) => item.id === id);
@@ -705,6 +861,10 @@ function openWorkDetail(workId) {
       <div class="detail-subline">${work.category} / ${creator.name} / ${work.year}</div>
       <h2>${work.title}</h2>
       <p class="detail-copy">${work.description}</p>
+      <div class="detail-author-actions">
+        <button class="button button-solid" type="button" data-open-inquiry data-prefill-service="${work.category === "品牌IP" ? "品牌IP" : work.category}">发同类需求</button>
+        <button class="detail-action" type="button" data-creator-id="${creator.id}">看作者方向</button>
+      </div>
     </div>
     <section class="detail-section">
       <h3>项目范围</h3>
@@ -755,6 +915,10 @@ function openCreatorDetail(creatorId) {
       <div class="detail-subline">${creator.role} / ${creator.city}</div>
       <h2>${creator.name}</h2>
       <p class="detail-copy">${creator.bio}</p>
+      <div class="detail-author-actions">
+        <a class="button button-ghost" href="./creator.html">看创作者工作台原型</a>
+        <button class="button button-solid" type="button" data-open-inquiry>向这个方向发需求</button>
+      </div>
     </div>
     <section class="detail-section">
       <h3>合作信息</h3>
@@ -794,11 +958,20 @@ function handleClick(event) {
   const filterButton = event.target.closest("[data-filter]");
   const closeTrigger = event.target.closest("[data-close-panel]");
   const inquiryTrigger = event.target.closest("[data-open-inquiry]");
+  const filterScrollTrigger = event.target.closest("[data-filter-and-scroll]");
 
   if (filterButton) {
     const category = filterButton.dataset.filter;
     renderFilters(category);
     renderWorks(category);
+    return;
+  }
+
+  if (filterScrollTrigger) {
+    const category = filterScrollTrigger.dataset.filterAndScroll;
+    renderFilters(category);
+    renderWorks(category);
+    document.querySelector("#works").scrollIntoView({ behavior: "smooth", block: "start" });
     return;
   }
 
@@ -819,6 +992,15 @@ function handleClick(event) {
 
   if (inquiryTrigger) {
     closePanel();
+    const prefillService = inquiryTrigger.dataset.prefillService;
+    if (prefillService && serviceSelect) {
+      for (const option of serviceSelect.options) {
+        if (option.value === prefillService) {
+          serviceSelect.value = prefillService;
+          break;
+        }
+      }
+    }
     document.querySelector("#inquiry").scrollIntoView({ behavior: "smooth", block: "start" });
   }
 }

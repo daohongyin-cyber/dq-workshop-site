@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>创作者工作台</title>
+    <meta name="description" content="邀请制创作者工作台原型：管理作品、修改资料、查看询价。" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="noise"></div>
+    <div class="page-shell">
+      <header class="site-header">
+        <a class="brand" href="./index.html" aria-label="返回站点首页">
+          <span class="brand-copy">
+            <strong>创作者工作台</strong>
+            <small>邀请制创作者入口</small>
+          </span>
+        </a>
+        <nav class="site-nav">
+          <a href="./index.html">返回首页</a>
+          <a href="#overview">概览</a>
+          <a href="#works">我的作品</a>
+          <a href="#profile">我的资料</a>
+          <a href="#leads">收到询价</a>
+        </nav>
+      </header>
+
+      <main class="workspace-main">
+        <section class="workspace-hero" id="overview">
+          <div>
+            <p class="section-kicker">概览</p>
+            <h1>创作者先管内容，再接询价</h1>
+            <p class="section-copy">
+              这条线只给邀请制创作者用。你的重点不是浏览作品，而是保持资料准确、作品可展示、询价能被及时处理。
+            </p>
+          </div>
+          <div class="workspace-stat-grid">
+            <article class="workspace-stat-card">
+              <span>接单状态</span>
+              <strong>开放中</strong>
+            </article>
+            <article class="workspace-stat-card">
+              <span>待处理询价</span>
+              <strong>4</strong>
+            </article>
+            <article class="workspace-stat-card">
+              <span>待补作品信息</span>
+              <strong>3</strong>
+            </article>
+            <article class="workspace-stat-card">
+              <span>首页精选作品</span>
+              <strong>2</strong>
+            </article>
+          </div>
+        </section>
+
+        <section class="workspace-section" id="works">
+          <div class="section-heading workspace-heading">
+            <div>
+              <p class="section-kicker">我的作品</p>
+              <h2>管理展示内容</h2>
+            </div>
+            <button class="button button-solid" type="button">上传新作品</button>
+          </div>
+          <div class="workspace-list">
+            <article class="workspace-item">
+              <div>
+                <strong>深海遗产</strong>
+                <p>海报视觉 / 已公开 / 已加入首页精选</p>
+              </div>
+              <div class="workspace-item-actions">
+                <button class="button button-ghost" type="button">编辑标题</button>
+                <button class="button button-ghost" type="button">调整封面</button>
+                <button class="button button-ghost" type="button">隐藏作品</button>
+              </div>
+            </article>
+            <article class="workspace-item">
+              <div>
+                <strong>白孔雀未启之屏</strong>
+                <p>海报视觉 / 已公开 / 待补项目说明</p>
+              </div>
+              <div class="workspace-item-actions">
+                <button class="button button-ghost" type="button">补项目说明</button>
+                <button class="button button-ghost" type="button">查看前台</button>
+              </div>
+            </article>
+            <article class="workspace-item">
+              <div>
+                <strong>红黑跃窗</strong>
+                <p>海报视觉 / 已公开 / 首页主图窗口</p>
+              </div>
+              <div class="workspace-item-actions">
+                <button class="button button-ghost" type="button">替换主图</button>
+                <button class="button button-ghost" type="button">编辑适合项目</button>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="workspace-section" id="profile">
+          <div class="section-heading workspace-heading">
+            <div>
+              <p class="section-kicker">我的资料</p>
+              <h2>保持资料清晰，甲方才容易判断</h2>
+            </div>
+          </div>
+          <div class="workspace-form">
+            <label>
+              展示名称
+              <input type="text" value="海报方向" />
+            </label>
+            <label>
+              擅长方向
+              <input type="text" value="主题海报 / 展陈海报 / 内容型封面" />
+            </label>
+            <label>
+              价格区间
+              <input type="text" value="价格按项目评估" />
+            </label>
+            <label>
+              交付周期
+              <input type="text" value="周期视复杂度而定" />
+            </label>
+            <label class="workspace-field-full">
+              自我介绍
+              <textarea rows="5">这一组更偏强排版、强画面和主题视觉表达，适合品牌活动海报、展陈海报和内容型封面项目。</textarea>
+            </label>
+            <label>
+              联系方式
+              <input type="text" value="由管理员统一分发" />
+            </label>
+            <label>
+              当前接单状态
+              <select>
+                <option>开放中</option>
+                <option>排期中</option>
+                <option>暂停接单</option>
+              </select>
+            </label>
+            <div class="workspace-field-full">
+              <button class="button button-solid" type="button">保存资料</button>
+            </div>
+          </div>
+        </section>
+
+        <section class="workspace-section" id="leads">
+          <div class="section-heading workspace-heading">
+            <div>
+              <p class="section-kicker">收到询价</p>
+              <h2>先判断匹配度，再决定接不接</h2>
+            </div>
+          </div>
+          <div class="workspace-list">
+            <article class="workspace-item workspace-item-lead">
+              <div>
+                <strong>品牌活动主视觉</strong>
+                <p>预算：8 千 - 2 万 / 交付：三周内 / 来源：管理员分配</p>
+                <p>希望偏未来感，但不要太复杂，主要用于品牌活动主 KV 和延展海报。</p>
+              </div>
+              <div class="workspace-item-actions">
+                <button class="button button-solid" type="button">进入沟通</button>
+                <button class="button button-ghost" type="button">转交管理员</button>
+              </div>
+            </article>
+            <article class="workspace-item workspace-item-lead">
+              <div>
+                <strong>展陈海报系列</strong>
+                <p>预算：2 万 - 5 万 / 交付：下月初前 / 来源：甲方直填</p>
+                <p>需要一套统一气质的主题海报，已经看过两组案例，希望风格靠近高对比和内容感。</p>
+              </div>
+              <div class="workspace-item-actions">
+                <button class="button button-solid" type="button">进入沟通</button>
+                <button class="button button-ghost" type="button">婉拒</button>
+              </div>
+            </article>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

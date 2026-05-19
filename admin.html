@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>管理后台</title>
+    <meta name="description" content="DQ 工作室管理后台原型：审核作品、维护首页、分配询价。" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="noise"></div>
+    <div class="page-shell">
+      <header class="site-header">
+        <a class="brand" href="./index.html" aria-label="返回站点首页">
+          <span class="brand-copy">
+            <strong>管理后台</strong>
+            <small>审核、分配、维护首页</small>
+          </span>
+        </a>
+        <nav class="site-nav">
+          <a href="./index.html">返回首页</a>
+          <a href="#overview">概览</a>
+          <a href="#review">审核内容</a>
+          <a href="#leads">分配询价</a>
+          <a href="#featured">首页精选</a>
+        </nav>
+      </header>
+
+      <main class="workspace-main">
+        <section class="workspace-hero" id="overview">
+          <div>
+            <p class="section-kicker">概览</p>
+            <h1>管理员先接住需求，再分配给创作者</h1>
+            <p class="section-copy">
+              第一阶段不要让甲方直接掉进复杂订单系统。先由管理员统一接住线索，再分配给邀请制创作者，会更稳。
+            </p>
+          </div>
+          <div class="workspace-stat-grid">
+            <article class="workspace-stat-card">
+              <span>待审核作品</span>
+              <strong>6</strong>
+            </article>
+            <article class="workspace-stat-card">
+              <span>待分配询价</span>
+              <strong>5</strong>
+            </article>
+            <article class="workspace-stat-card">
+              <span>邀请中创作者</span>
+              <strong>3</strong>
+            </article>
+            <article class="workspace-stat-card">
+              <span>首页精选位</span>
+              <strong>2 / 2</strong>
+            </article>
+          </div>
+        </section>
+
+        <section class="workspace-section" id="review">
+          <div class="section-heading workspace-heading">
+            <div>
+              <p class="section-kicker">审核内容</p>
+              <h2>先决定哪些作品该公开</h2>
+            </div>
+          </div>
+          <div class="workspace-list">
+            <article class="workspace-item">
+              <div>
+                <strong>白龙模型</strong>
+                <p>创作者：三维方向 / 状态：待审核 / 问题：需要补一句项目说明</p>
+              </div>
+              <div class="workspace-item-actions">
+                <button class="button button-solid" type="button">通过</button>
+                <button class="button button-ghost" type="button">打回修改</button>
+              </div>
+            </article>
+            <article class="workspace-item">
+              <div>
+                <strong>宠物品牌应用图</strong>
+                <p>创作者：品牌 IP 方向 / 状态：待审核 / 问题：需确认是否放首页</p>
+              </div>
+              <div class="workspace-item-actions">
+                <button class="button button-solid" type="button">通过</button>
+                <button class="button button-ghost" type="button">移出首页候选</button>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="workspace-section" id="leads">
+          <div class="section-heading workspace-heading">
+            <div>
+              <p class="section-kicker">分配询价</p>
+              <h2>先判断方向，再分给合适的人</h2>
+            </div>
+          </div>
+          <div class="workspace-list">
+            <article class="workspace-item workspace-item-lead">
+              <div>
+                <strong>潮流品牌主视觉</strong>
+                <p>方向：海报视觉 / 预算：8 千 - 2 万 / 联系方式：已留微信</p>
+                <p>甲方先看了海报和品牌 IP 两组作品，希望偏高对比、年轻化。</p>
+              </div>
+              <div class="workspace-item-actions">
+                <button class="button button-solid" type="button">分给海报方向</button>
+                <button class="button button-ghost" type="button">继续澄清需求</button>
+              </div>
+            </article>
+            <article class="workspace-item workspace-item-lead">
+              <div>
+                <strong>角色胸像定制</strong>
+                <p>方向：头雕 / 预算：2 万 - 5 万 / 联系方式：已留手机号</p>
+                <p>甲方已经看过胸像方向作品，希望先看排期，再决定是否下单。</p>
+              </div>
+              <div class="workspace-item-actions">
+                <button class="button button-solid" type="button">分给头雕方向</button>
+                <button class="button button-ghost" type="button">转为待确认</button>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="workspace-section" id="featured">
+          <div class="section-heading workspace-heading">
+            <div>
+              <p class="section-kicker">首页精选</p>
+              <h2>让甲方第一眼看到最对的作品</h2>
+            </div>
+          </div>
+          <div class="workspace-list">
+            <article class="workspace-item">
+              <div>
+                <strong>当前首页主图</strong>
+                <p>红黑跃窗 / 海报视觉</p>
+              </div>
+              <div class="workspace-item-actions">
+                <button class="button button-ghost" type="button">替换主图</button>
+              </div>
+            </article>
+            <article class="workspace-item">
+              <div>
+                <strong>当前精选项目</strong>
+                <p>深海遗产 / 街头角色设定</p>
+              </div>
+              <div class="workspace-item-actions">
+                <button class="button button-ghost" type="button">调整排序</button>
+                <button class="button button-ghost" type="button">更换项目</button>
+              </div>
+            </article>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
