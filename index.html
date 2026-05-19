@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DQ 工作室</title>
+    <meta
+      name="description"
+      content="DQ 工作室静态原型：首页包含简介、主图、精选项目、作品瀑布流、作者信息和询价入口。"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="noise"></div>
+    <div class="page-shell">
+      <header class="site-header">
+        <a class="brand" href="#home" aria-label="DQ 工作室首页">
+          <span class="brand-copy">
+            <strong>DQ 工作室</strong>
+            <small>作品档案与委托入口</small>
+          </span>
+        </a>
+        <nav class="site-nav">
+          <a href="#home">首页</a>
+          <a href="#works">作品</a>
+          <a href="#creators">作者</a>
+          <a href="#inquiry">询价</a>
+        </nav>
+        <button class="header-cta" type="button" data-open-inquiry>发起项目</button>
+      </header>
+
+      <main>
+        <section class="hero" id="home">
+          <div class="hero-copy">
+            <p class="eyebrow">极简 / 黑白灰 / 作品优先 / 精选合作</p>
+            <h1 class="hero-title">
+              <span>DQ</span>
+              <span>工作室</span>
+            </h1>
+            <p class="hero-text">
+              面向品牌、潮流团体和收藏爱好者的设计工作室原型。
+              先通过首页建立气质，再通过作品和作者详情判断是否适合合作。
+            </p>
+            <div class="hero-actions">
+              <a class="button button-solid" href="#works">查看作品</a>
+              <button class="button button-ghost" type="button" data-open-inquiry>
+                发起询价
+              </button>
+            </div>
+            <div class="hero-tags">
+              <span>品牌设计</span>
+              <span>海报视觉</span>
+              <span>专辑封面</span>
+              <span>三维建模</span>
+              <span>头雕概念</span>
+            </div>
+          </div>
+
+          <div class="hero-stage">
+            <div class="stage-frame">
+              <button class="stage-window-button" type="button" data-work-id="burger-emblem">
+                <div class="stage-window" id="heroFeature"></div>
+              </button>
+            </div>
+            <div class="stage-note">
+              <span>首页主图窗口</span>
+              <span>点击可直接进入作品详情</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="section featured-works">
+          <div class="section-heading">
+            <div>
+              <p class="section-kicker">精选项目</p>
+              <h2>先让作品说话</h2>
+            </div>
+            <p class="section-copy">
+              首页先展示一到两个最能代表气质的项目，让来访者先判断审美和完成度。
+            </p>
+          </div>
+          <div class="featured-grid" id="featuredGrid"></div>
+        </section>
+
+        <section class="section studio-flow">
+          <div class="section-heading">
+            <div>
+              <p class="section-kicker">浏览路径</p>
+              <h2>先看作品，再看作者，再谈合作</h2>
+            </div>
+          </div>
+          <div class="flow-grid">
+            <article class="flow-card">
+              <span>01</span>
+              <h3>先通过作品判断气质</h3>
+              <p>首屏和精选项目负责建立第一印象，瀑布流负责继续筛选项目类型和完成度。</p>
+            </article>
+            <article class="flow-card">
+              <span>02</span>
+              <h3>再通过作者页判断实力</h3>
+              <p>作者页重点展示擅长方向、价格区间、交付周期和对应代表作。</p>
+            </article>
+            <article class="flow-card">
+              <span>03</span>
+              <h3>最后发起项目沟通</h3>
+              <p>这版先做轻量询价入口，不急着上复杂交易系统，先跑通工作室自己的接单流程。</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="section works-section" id="works">
+          <div class="section-heading">
+            <div>
+              <p class="section-kicker">作品墙</p>
+              <h2>作品瀑布流</h2>
+            </div>
+            <p class="section-copy">
+              卡片只保留标题、类目、作者和一句短说明，更多信息收进详情面板里。
+            </p>
+          </div>
+          <div class="filter-row" id="filterRow"></div>
+          <div class="works-masonry" id="worksGrid"></div>
+        </section>
+
+        <section class="section creators-section" id="creators">
+          <div class="section-heading">
+            <div>
+              <p class="section-kicker">作者</p>
+              <h2>让第三方快速判断作者实力</h2>
+            </div>
+            <p class="section-copy">
+              这一部分不是简历，而是作者分展厅。重点展示能做什么、适合什么项目、价格大概在哪个区间。
+            </p>
+          </div>
+          <div class="creators-grid" id="creatorsGrid"></div>
+        </section>
+
+        <section class="section inquiry-section" id="inquiry">
+          <div class="section-heading">
+            <div>
+              <p class="section-kicker">询价</p>
+              <h2>发起一个项目</h2>
+            </div>
+            <p class="section-copy">
+              当前为原型页面，这里保留一个轻量询价区，后面可以接入真实表单或你的联系方式。
+            </p>
+          </div>
+          <div class="inquiry-layout">
+            <div class="inquiry-panel">
+              <p class="inquiry-note">当前适合展示在首页的合作方向</p>
+              <h3>品牌视觉、潮流海报、专辑封面、三维表现与头雕概念</h3>
+              <ul class="inquiry-points">
+                <li>适合想先看审美和案例再谈合作的客户</li>
+                <li>适合有预算区间和时间节点的项目</li>
+                <li>适合先由工作室统一承接与分配的接单方式</li>
+              </ul>
+            </div>
+            <form class="inquiry-form">
+              <label>
+                项目类型
+                <select>
+                  <option>品牌设计</option>
+                  <option>海报视觉</option>
+                  <option>专辑封面</option>
+                  <option>三维建模</option>
+                  <option>头雕概念</option>
+                </select>
+              </label>
+              <label>
+                预算区间
+                <select>
+                  <option>3 千 - 8 千</option>
+                  <option>8 千 - 2 万</option>
+                  <option>2 万 - 5 万</option>
+                  <option>5 万以上</option>
+                </select>
+              </label>
+              <label>
+                交付时间
+                <input type="text" placeholder="例如：三周内 / 6 月中旬前" />
+              </label>
+              <label>
+                项目描述
+                <textarea rows="5" placeholder="一句话说清楚你要做什么、给谁看、希望是什么气质。"></textarea>
+              </label>
+              <label>
+                联系方式
+                <input type="text" placeholder="微信 / 手机 / 邮箱" />
+              </label>
+              <button class="button button-solid" type="button">提交原型表单</button>
+            </form>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        当前为静态演示壳子，后续可替换为真实作品图片、作者资料和项目详情内容。
+      </footer>
+    </div>
+
+    <aside class="detail-panel" id="detailPanel" aria-hidden="true">
+      <div class="detail-backdrop" data-close-panel></div>
+      <div class="detail-sheet">
+        <button class="detail-close" type="button" aria-label="关闭面板" data-close-panel>
+          ×
+        </button>
+        <div class="detail-content" id="detailContent"></div>
+      </div>
+    </aside>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
